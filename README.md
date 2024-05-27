@@ -4,7 +4,7 @@ A simple and responsive Todo application built using React, TypeScript, Material
 
 
 ## Demo
-You can view a live demo of the application [https://my-app-delta-snowy.vercel.app/](#).
+You can view a live demo of the application [](https://my-app-delta-snowy.vercel.app/).
 
 ## Features
 - Add new todos.

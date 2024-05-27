@@ -21,8 +21,9 @@ const TodoList:React.FC<ITodoList> = ({todos,deleteTodo,toggleTodo}) => {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      gap: "0.5rem",
+      gap: "1rem",
       mt: 3,
+      
     }}
   >
     <Grid
@@ -37,10 +38,10 @@ const TodoList:React.FC<ITodoList> = ({todos,deleteTodo,toggleTodo}) => {
         maxHeight: "350px",
         overflow: "auto",
         border: "1px solid purple",
-        borderRadius: "0.5rem",
+        borderRadius: "5px",
       }}
     >
-      <Typography className="title" color="secondary" align="center" variant="h4">InProgress Todos</Typography>
+      <Typography className="title" color="secondary" align="center" variant="h4">Task in progress</Typography>
       {progressTodos.length ? (
         progressTodos.map((todo) => (
           <TodoListItem
@@ -51,7 +52,7 @@ const TodoList:React.FC<ITodoList> = ({todos,deleteTodo,toggleTodo}) => {
           />
         ))
       ) : (
-        <Typography color="error" mt={3}>No InProgress Todos!</Typography>
+        <Typography color="error" mt={3}>No Task in progress!</Typography>
       )}
     </Grid>
     <Grid
@@ -69,7 +70,7 @@ const TodoList:React.FC<ITodoList> = ({todos,deleteTodo,toggleTodo}) => {
         borderRadius: "0.5rem",
       }}
     >
-      <Typography className="title" sx={{color:"green"}} align="center" variant="h4">Completed Todos</Typography>
+      <Typography className="title" sx={{color:"green"}} align="center" variant="h4">Completed Taskes</Typography>
       {completedTodos.length ? (
         completedTodos.map((todo) => (
           <TodoListItem

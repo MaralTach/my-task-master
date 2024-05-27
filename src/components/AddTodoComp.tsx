@@ -73,21 +73,28 @@ const AddTodoComp = ({addTodo}: IAddTodoComp) => {
         justifyContent: { xs: "flex-start", sm: "center" },
         m: { xs: 1, sm: "auto" },
         height: { xs: "120px", sm: "80px" },
+        border: "1px solid black",
+        borderRadius: "10px",
+        boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
+        color:"white"
       }}
     >
       <TextField
         id="outlined-basic"
         label="New Todo"
         color="success"
-        sx={{ minWidth: { xs: "100%", sm: "50%" }, height: "50px", m: 1 }}
+        sx={{ minWidth: { xs: "100%", sm: "50%" }, height: "50px", m: 1, 
+        
+      }}
         variant="outlined"
         value={task}
         onChange={(e) => setTask(e.target.value)}
         inputProps={{ maxLength: 40 }}
+        
       />
       <Button
         variant="contained"
-        color="success"
+        color="warning"
         sx={{ minWidth: { xs: "100%", sm: "15%" }, height: "55px", m: 1 }}
         endIcon={<SaveIcon />}
         onClick={handleClick}

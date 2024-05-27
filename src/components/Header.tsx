@@ -1,11 +1,14 @@
 import { Typography } from '@mui/material'
 import { FcTodoList } from "react-icons/fc";
+import { deepPurple } from '@mui/material/colors';
 import React from 'react'
 
 const Header = () => {
   return (
-    <Typography color="error" variant="h3" component="h1" align='center'>
-        Task Master <FcTodoList />
+    <Typography color={deepPurple[600]} variant="h3" component="h1" align='center' display="flex" justifyContent="center" gap="0.5rem" textAlign="center" 
+    mt={4} fontWeight={600}
+ >
+       My Task Master <FcTodoList />
     </Typography>
   )
 }

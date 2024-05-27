@@ -6,6 +6,7 @@ import AddTodoComp from '../components/AddTodoComp'
 import TodoList from '../components/TodoList'
 import { notify, SweetIcon, SweetPosition } from "../helper/sweetAlert";
 
+
 // todo state'ti api'den gelen  icin state'in type'na objeler icin veri tanimlamasini yapmak icin interface kullaniyoruz
 
 
@@ -80,7 +81,7 @@ const Main = () => {
 
 
   return (
-    <Container>
+    <Container >
         <Header />
         <AddTodoComp addTodo={addTodo} />
         <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo}  />

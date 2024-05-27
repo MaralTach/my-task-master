@@ -58,15 +58,15 @@ interface IAddTodoComp {
 
 const AddTodoComp = ({addTodo}: IAddTodoComp) => {
     const [task , setTask] = useState('')
+
     const handleClick = () => {
         console.log(task)
         addTodo(task)
         setTask('')
-
     }
  
   return (
-    <div>
+   
         <Box
       sx={{
         display: { xs: "block", sm: "flex" },
@@ -97,7 +97,7 @@ const AddTodoComp = ({addTodo}: IAddTodoComp) => {
         Save Todo
       </Button>
     </Box>
-    </div>
+
   )
 }
 

@@ -1,4 +1,4 @@
-# Todo App
+# Todo App with TypeScript
 
 A simple and responsive Todo application built using React, TypeScript, Material-UI, and Axios. This app allows users to manage their tasks efficiently by adding, toggling, and deleting todos.
 
@@ -30,26 +30,26 @@ Delete Todo: Click the delete button next to a todo item to remove it from the l
 
 ## Project Structure
 
-src/
-│
-├── components/
-│ ├── AddTodoComp.tsx
-│ ├── Header.tsx
-│ ├── TodoList.tsx
-│ ├── TodoListItem.tsx
-│ └── style.css
-│
-├── helper/
-│ └── sweetAlert.ts
-│
-|
-│
-├── pages/
-│ └── Main.tsx
-│
-├── App.tsx
-├── index.tsx
-└── types.d.ts
+├── package.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+├── README.md
+├── src
+│   ├── App.tsx
+│   ├── components
+│   │   ├── AddTodoComp.tsx
+│   │   ├── TodoListItem.tsx
+│   │   └── TodoList.tsx
+│   ├── helper
+│   │   └── sweetAlert.ts
+│   ├── index.tsx
+│   ├── pages
+│   │   └── Main.tsx
+│   ├── react-app-env.d.ts
+│   └── types.d.ts
+├── tsconfig.json
+└── yarn.lock
 
 ## Endpoints
 
@@ -57,3 +57,4 @@ src/
 `POST /todos`: Add a new todo.
 `PUT /todos/:id`: Update a todo.
 `DELETE /todos/:id`: Delete a todo.
+

@@ -2,21 +2,9 @@
 
 A simple and responsive Todo application built using React, TypeScript, Material-UI, and Axios. This app allows users to manage their tasks efficiently by adding, toggling, and deleting todos.
 
-## Table of Contents
-- [Demo](#demo)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Setup and Installation](#setup-and-installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Components](#components)
-- [Helper Functions](#helper-functions)
-- [API](#api)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Demo
-You can view a live demo of the application [here](#).
+You can view a live demo of the application [https://my-app-delta-snowy.vercel.app/](#).
 
 ## Features
 - Add new todos.

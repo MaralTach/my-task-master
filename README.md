@@ -30,6 +30,10 @@ Delete Todo: Click the delete button next to a todo item to remove it from the l
 
 ## Project Structure
 
+```
+Todoapp with TypeScript+React(CRA)
+
+
 ├── package.json
 ├── public
 │   ├── favicon.ico
@@ -50,6 +54,7 @@ Delete Todo: Click the delete button next to a todo item to remove it from the l
 │   └── types.d.ts
 ├── tsconfig.json
 └── yarn.lock
+```
 
 ## Endpoints
 

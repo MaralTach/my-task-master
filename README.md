@@ -2,6 +2,8 @@
 
 A simple and responsive Todo application built using React, TypeScript, Material-UI, and Axios. This app allows users to manage their tasks efficiently by adding, toggling, and deleting todos.
 
+![Todo App with TypeScript Demo](https://github.com/MaralTach/hospital-app/raw/master/12-HD-720p.gif)
+
 ## Demo
 
 You can view a live demo of the application [here](https://my-app-delta-snowy.vercel.app/).

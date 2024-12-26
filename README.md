@@ -1,20 +1,22 @@
 # Todo App with TypeScript
 
-A simple and responsive Todo application built using React, TypeScript, Material-UI, and Axios. This app allows users to manage their tasks efficiently by adding, toggling, and deleting todos.
+This is a Todo app built with React and Material UI, allowing users to manage their tasks. The application provides features such as adding, editing, deleting tasks, toggling completion status, and categorizing tasks into "Business" and "Personal" categories. Additionally, the app supports light and dark modes.
 
-![Todo App with TypeScript Demo](https://github.com/MaralTach/my-app/blob/master/taskmaster.gif)
+
+
+<!-- ![Todo App with TypeScript Demo](https://github.com/MaralTach/my-app/blob/master/taskmaster.gif) -->
 
 ## Demo
 
 You can view a live demo of the application [here](https://my-app-delta-snowy.vercel.app/).
 
 ## Features
-
-- Add new todos.
-- Mark todos as completed.
-- Delete todos.
-- Separate lists for in-progress and completed todos.
-- Notifications for actions (add, update, delete).
+- Add Todo: Create new tasks with a title and a category (Business/Personal).
+- Edit Todo: Modify existing tasks.
+- Delete Todo: Remove tasks from the list.
+- Mark Todo as Done: Toggle the completion status of a task.
+- Search: Filter tasks by category (Business/Personal).
+- Dark/Light Mode: Switch between dark and light themes.
 
 ## Technologies Used
 
@@ -25,10 +27,12 @@ You can view a live demo of the application [here](https://my-app-delta-snowy.ve
 - **SweetAlert2**: A beautiful, responsive, customizable, and accessible (WAI-ARIA) replacement for JavaScript's popup boxes.
 
 ## Usage
-
-Add Todo: Enter a new task in the input field and click the "Save Todo" button.
-Toggle Todo: Click on a todo item to mark it as completed or in-progress.
-Delete Todo: Click the delete button next to a todo item to remove it from the list.
+Add a task: Use the "New Todo" input to add a task. Select the category (Business/Personal) and click "Save Todo".
+Search tasks: Use the search field to filter tasks by title within the Business and Personal sections.
+Edit a task: Click the Edit icon to modify the task. Changes will be saved when you click the save icon.
+Delete a task: Click the Delete icon to remove a task.
+Mark task as done: Click the checkbox next to the task to mark it as completed. The task will appear crossed out.
+Switch between themes: Use the theme toggle to switch between light and dark mode.
 
 ## Project Structure
 
@@ -47,6 +51,10 @@ Todoapp with TypeScript+React(CRA)
 │   │   ├── AddTodoComp.tsx
 │   │   ├── TodoListItem.tsx
 │   │   └── TodoList.tsx
+│   │   └── DarkLightMode.tsx
+│   │   └── Header.tsx
+│   │   └── ThemeContext.tsx
+│   │   └── ToggleColorMode.tsx
 │   ├── helper
 │   │   └── sweetAlert.ts
 │   ├── index.tsx
@@ -64,4 +72,5 @@ Todoapp with TypeScript+React(CRA)
 `POST /todos`: Add a new todo.
 `PUT /todos/:id`: Update a todo.
 `DELETE /todos/:id`: Delete a todo.
+
 

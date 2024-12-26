@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Experimental_CssVarsProvider as CssVarsProvider, useColorScheme } from '@mui/material/styles';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import DarkLightMode from './DarkLightMode';
-import Main from '../pages/Main';
+
 
 
 const ToggleColorMode = ({ children }: { children: React.ReactNode }) => {

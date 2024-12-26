@@ -11,7 +11,7 @@ const ToggleColorMode = ({ children }: { children: React.ReactNode }) => {
 
   const themeMode = mode === 'system' ? 'light' : mode || 'light';
 
-  // Tema ayarlarını burada oluşturuyoruz
+
   const theme = React.useMemo(
     () =>
       createTheme({

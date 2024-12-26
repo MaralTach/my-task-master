@@ -45,7 +45,7 @@ const TodoListItem: React.FC<ITodoListFn & { todo: ITodoType }> = ({
               suppressContentEditableWarning
               onBlur={(e) => {
                 const newText = e.currentTarget.textContent?.trim() || '';
-                // Eğer metin boş değilse, yeni değeri kaydet
+               
                 if (newText) {
                   setNewTask(newText);
                 }

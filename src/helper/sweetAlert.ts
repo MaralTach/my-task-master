@@ -1,6 +1,5 @@
 import Swal from "sweetalert2";
 
-//! enum olarak tanımladıkki bizden ne bekliyorsa yanlış yazmayalım diye.
 export enum SweetIcon {
   WARNING = "warning",
   ERROR = "error",

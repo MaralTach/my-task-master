@@ -13,8 +13,6 @@ const url = "https://634ac3fc5df952851418480f.mockapi.io/api/todos";
 //! statik degisken varsa component disinda tanimlanmasi daha iyidir. state degistiginde component tekrar render edilir ve yeniden olustugu icin bellekde yeni bir alan demek.onun icin scopun disinda tanimlamakda yarar var
 
 const Main = () => {
-  // const [todos, setTodos] = useState([]as ITodoType[]) //type'i tnimlamak  1nji yontem
-  // const [todos, setTodos] = useState<ArrayITodoType>>([])2nji yontem
 
   // todo'lari bir yerde toplamak icin anlik degisimleri ui'yansitmak icin kullaniyoruz
   const [todos, setTodos] = useState<ITodoType[]>([]); //yaygin kullanim 3nji yontem

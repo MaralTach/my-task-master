@@ -9,8 +9,7 @@ import ToggleColorMode from "../components/ToggleColorMode";
 
 // todo state'ti api'den gelen  icin state'in type'na objeler icin veri tanimlamasini yapmak icin interface kullaniyoruz
 
-const url = "https://634ac3fc5df952851418480f.mockapi.io/api/todos";
-//! statik degisken varsa component disinda tanimlanmasi daha iyidir. state degistiginde component tekrar render edilir ve yeniden olustugu icin bellekde yeni bir alan demek.onun icin scopun disinda tanimlamakda yarar var
+
 
 const Main = () => {
 

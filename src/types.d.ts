@@ -9,10 +9,12 @@ interface ITodoType{
 type AddFn = (task:string) => Promise<void>;
 type ToggleFn = (todo:ITodoType) => Promise<void>;
 type DeleteFn = (id:number | string) => Promise<void>;
+type EditFn = (todo:ITodoType) => Promise<void>;
 
 interface ITodoListFn{
     deleteTodo:DeleteFn;
     toggleTodo:ToggleFn
+    editTodo:EditFn
 }
 
 

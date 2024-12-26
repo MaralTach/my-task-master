@@ -8,10 +8,7 @@ interface ITodoList extends ITodoListFn{
 
 }
 
-//?React>FC
-//! Burada React.FC<ITodoList> ifadesi, TodoList bileşeninin ITodoList arayüzünde tanımlanan props'ları alacağını belirtir. Bu, TypeScript'in type kontrol mekanizmasını kullanarak props'ların doğru türde olmasını sağlar ve potansiyel hataları önler.
-
-const TodoList:React.FC<ITodoList> = ({todos,deleteTodo,toggleTodo}) => {
+const TodoList:React.FC<ITodoList> = ({todos,deleteTodo,toggleTodo,editTodo}) => {
   const progressTodos = todos.filter((todo) => !todo.isDone)
   const completedTodos = todos.filter((todo) => todo.isDone)
   return (
@@ -41,18 +38,19 @@ const TodoList:React.FC<ITodoList> = ({todos,deleteTodo,toggleTodo}) => {
         borderRadius: "5px",
       }}
     >
-      <Typography className="title" color="secondary" align="center" variant="h4">Task in progress</Typography>
+      <Typography className="title" color="error" align="center" fontFamily={"monospace"} variant="h4">Task in progress</Typography>
       {progressTodos.length ? (
         progressTodos.map((todo) => (
           <TodoListItem
             deleteTodo={deleteTodo}
             toggleTodo={toggleTodo}
+            editTodo={editTodo}
             todo={todo}
             key={todo.id}
           />
         ))
       ) : (
-        <Typography color="error" mt={3}>No Task in progress!</Typography>
+        <Typography color="error" mt={3} align="center">No Task in progress!</Typography>
       )}
     </Grid>
     <Grid
@@ -70,18 +68,19 @@ const TodoList:React.FC<ITodoList> = ({todos,deleteTodo,toggleTodo}) => {
         borderRadius: "0.5rem",
       }}
     >
-      <Typography className="title" sx={{color:"green"}} align="center" variant="h4">Completed Taskes</Typography>
+      <Typography className="title" sx={{color:"green"}} align="center" fontFamily={"monospace"} variant="h4" >Completed Taskes</Typography>
       {completedTodos.length ? (
         completedTodos.map((todo) => (
           <TodoListItem
             deleteTodo={deleteTodo}
+            editTodo={editTodo}
             toggleTodo={toggleTodo}
             todo={todo}
             key={todo.id}
           />
         ))
       ) : (
-        <Typography color="error" mt={3}>No Completed Todos!</Typography>
+        <Typography color="error"  mt={3} align="center">No Completed Todos!</Typography>
       )}
     </Grid>
   </Grid>

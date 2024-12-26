@@ -8,7 +8,8 @@ const Header = () => {
     <Typography color={deepPurple[600]} variant="h3" component="h1" align='center' display="flex" justifyContent="center" gap="0.5rem" textAlign="center" 
     mt={4} fontWeight={600}
  >
-       My Task Master <FcTodoList />
+       What's your plan? <FcTodoList />
+  
     </Typography>
   )
 }

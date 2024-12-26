@@ -4,7 +4,7 @@ This is a Todo app built with React and Material UI, allowing users to manage th
 
 
 
-![Todo App with TypeScript Demo](https://github.com/MaralTach/my-app/blob/master/taskmaster.gif)
+![Todo App with TypeScript Demo](https://github.com/MaralTach/my-app/blob/master/task.gif)
 
 ## Demo
 

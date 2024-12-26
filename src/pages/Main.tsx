@@ -7,35 +7,29 @@ import TodoList from "../components/TodoList";
 import { notify, SweetIcon, SweetPosition } from "../helper/sweetAlert";
 import ToggleColorMode from "../components/ToggleColorMode";
 
-// todo state'ti api'den gelen  icin state'in type'na objeler icin veri tanimlamasini yapmak icin interface kullaniyoruz
+
 
 const url = "https://634ac3fc5df952851418480f.mockapi.io/api/todos";
 
 const Main = () => {
 
-  // todo'lari bir yerde toplamak icin anlik degisimleri ui'yansitmak icin kullaniyoruz
-  const [todos, setTodos] = useState<ITodoType[]>([]); //yaygin kullanim 3nji yontem
+ 
+  const [todos, setTodos] = useState<ITodoType[]>([]); 
 
   // console.log(todos);
 
   const getTodos = async () => {
     try {
-      const { data } = await axios<ITodoType[]>(url); //axiosa type belirlemek
+      const { data } = await axios<ITodoType[]>(url); 
       setTodos(data);
     } catch (error) {}
   };
 
-  // const addTodo = async (task:string) => {
-  //    try {
 
-  //    } catch (error) {
-
-  //    }
-  // }
 
   const addTodo: AddFn = async (task, category) => {
     try {
-      await axios.post(url, { task, category, isDone: false }); // Kategori eklendi
+      await axios.post(url, { task, category, isDone: false });
       notify("Todo created!", SweetIcon.SUCCESS, SweetPosition.Center);
       getTodos();
     } catch (error) {

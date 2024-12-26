@@ -19,9 +19,12 @@ const TodoListItem: React.FC<ITodoListFn & { todo: ITodoType }> = ({
   };
 
   const handleSaveClick = async () => {
-    if (newTask !== todo.task) {
-      await editTodo({ ...todo, task: newTask });
+    const trimmedTask = newTask.trim();
+
+    if (trimmedTask && trimmedTask !== todo.task) {
+      await editTodo({ ...todo, task: trimmedTask });
     }
+
     setIsEditing(false); 
   };
 
@@ -40,7 +43,14 @@ const TodoListItem: React.FC<ITodoListFn & { todo: ITodoType }> = ({
             <div
               contentEditable
               suppressContentEditableWarning
-              onBlur={(e) => setNewTask(e.currentTarget.textContent || '')}
+              onBlur={(e) => {
+                const newText = e.currentTarget.textContent?.trim() || '';
+                // Eğer metin boş değilse, yeni değeri kaydet
+                if (newText) {
+                  setNewTask(newText);
+                }
+
+              }}
               style={{
                 border: '1px solid #f7f6f6',
                 borderRadius: '5px',
@@ -68,7 +78,7 @@ const TodoListItem: React.FC<ITodoListFn & { todo: ITodoType }> = ({
             </IconButton>
           )}
 
-<Checkbox
+      <Checkbox
         checked={isChecked}
         onChange={handleCheckboxChange} 
         sx={{ marginRight: "10px" }}

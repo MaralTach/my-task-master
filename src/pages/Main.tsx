@@ -19,7 +19,7 @@ const Main = () => {
   // todo'lari bir yerde toplamak icin anlik degisimleri ui'yansitmak icin kullaniyoruz
   const [todos, setTodos] = useState<ITodoType[]>([]); //yaygin kullanim 3nji yontem
 
-  console.log(todos);
+  // console.log(todos);
 
   const getTodos = async () => {
     try {
@@ -36,16 +36,19 @@ const Main = () => {
   //    }
   // }
 
-  const addTodo: AddFn = async (task) => {
+  const addTodo: AddFn = async (task, category) => {
     try {
-      await axios.post(url, { task, isDone: false });
+      await axios.post(url, { task, category, isDone: false }); // Kategori eklendi
       notify("Todo created!", SweetIcon.SUCCESS, SweetPosition.Center);
       getTodos();
     } catch (error) {
       notify("Todo not created!", SweetIcon.ERROR, SweetPosition.BottomEnd);
     }
   };
+  
 
+
+  
   const toggleTodo: ToggleFn = async (todo) => {
     try {
       await axios.put(`${url}/${todo.id}`, { ...todo, isDone: !todo.isDone });

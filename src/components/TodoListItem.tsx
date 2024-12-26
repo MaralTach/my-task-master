@@ -14,7 +14,7 @@ const TodoListItem: React.FC<ITodoListFn & { todo: ITodoType }> = ({
   const [newTask, setNewTask] = useState(todo.task);
 
   const handleEditClick = () => {
-    setIsEditing(true); // Düzenleme moduna geç
+    setIsEditing(true); 
   };
 
   const handleSaveClick = async () => {
@@ -82,7 +82,7 @@ const TodoListItem: React.FC<ITodoListFn & { todo: ITodoType }> = ({
           boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
         }}
         primary={todo.task}
-        onClick={() => toggleTodo(todo)}
+        // onClick={() => toggleTodo(todo)}
       />
     </ListItem>
   );

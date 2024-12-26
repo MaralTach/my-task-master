@@ -4,9 +4,10 @@ interface ITodoType{
     isDone: boolean
     id: string | number
     todo?:string
+    category: 'business' | 'personal';
 }
 
-type AddFn = (task:string) => Promise<void>;
+type AddFn = (task:string, category:string) => Promise<void>;
 type ToggleFn = (todo:ITodoType) => Promise<void>;
 type DeleteFn = (id:number | string) => Promise<void>;
 type EditFn = (todo:ITodoType) => Promise<void>;
